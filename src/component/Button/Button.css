@@ -45,15 +45,16 @@
     border-color:  #1fff02;
     margin-top: 0px;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    max-width: 180px;
+    width: 180px;
     height: 80px;
     font-size: 20px;
   }
   
   .button--crokpot:hover,
   .button--crokpot:active {
-    color: white;
-    background: #66fd02;
+    color: rgb(6, 88, 47);
+    background-image:url('https://i.imgur.com/9beV1Yh.png');
+    opacity: 60%;
     border-color:  #cef102;
   }
 
