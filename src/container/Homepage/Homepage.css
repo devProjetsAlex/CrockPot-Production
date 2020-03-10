@@ -1,12 +1,14 @@
 .ImageLogo{
     position: absolute;
     height:100%;
-    width:960px;
-    display:flex;
-    
+    width: 960px;    
+    display:block;
+    margin-left: 18%;
+
+
     background-image: url('https://i.imgur.com/gB4kX3t.png');
     margin-top: -135px;
     position: absolute;
     z-index: 10;
    
-}
+}  
