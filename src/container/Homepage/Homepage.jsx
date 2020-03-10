@@ -1,15 +1,12 @@
 import React from 'react'
-import Button from '../../component/Button/Button'
 import './Homepage.css'
+import Background from '../../component/Background/Background'
 
-const Homepage = () => {
-    return (
-        <>
-        
-        <Button crokpot/>
-        
-        </>
-    )
-}
+const Homepage = () => (
+    <>
+    <Background/>
+    <div className='Homepage'></div>
+    </>
+)
 
 export default Homepage

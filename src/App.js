@@ -1,19 +1,64 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route  
+} from "react-router-dom";
+import Button from './component/Button/Button'
 
-import Background from './component/Background/Background'
-import Layout from './component/Layout/Layout.component'
+import Accueil from './container/Accueil/Accueil'
+import Menu from './container/Menu/Menu'
+import Mixologie from './container/Mixologie/Mixologie'
+import Homepage from './container/Homepage/Homepage'
+import Reservation from "./container/Reservation/Reservation";
 
-function App() {
+export default function BasicExample() {
   return (
-  <>
-    <div className='App'>
-      <Layout/>
-    <Background/>
- 
-    </div>
-  </>
+    <Router>
+      <div className="Header">
+       
+            <Button crokpot to="/">Home</Button>
+        
+            <Button crokpot to="/accueil">Accueil</Button>
+       
+            <Button crokpot to="/menu">Menu</Button>
+        
+            <Button crokpot to="/mixologie"> Mixologie </Button>
+     
+            <Button crokpot to="/reservation"> Reservation </Button>
+
+        <hr />
+
+        {/*
+          A <Switch> looks through all its children <Route>
+          elements and renders the first one whose path
+          matches the current URL. Use a <Switch> any time
+          you have multiple routes, but you want only one
+          of them to render at a time
+        */}
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route path="/accueil">
+            <Accueil />
+          </Route>
+          <Route path="/menu">
+            <Menu />
+          </Route>
+          <Route path="/mixologie">
+            <Mixologie />
+          </Route>
+          <Route path="/reservation">
+            <Reservation />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+// You can think of these components as "pages"
+// in your app.
+
+
