@@ -14,14 +14,19 @@ import Mixologie from './container/Mixologie/Mixologie'
 import Homepage from './container/Homepage/Homepage'
 import Reservation from "./container/Reservation/Reservation";
 
+import {ReactComponent as Logo} from './asset/image/logo.svg' 
+import {LogoContainer, HeaderContainer} from './component/LogoContainer/LogoContainer'
 export default function BasicExample() {
   return (
     <Router>
       <div>
-      <div className="Header">
+       <div className='Header'>
+          <HeaderContainer >
+            <LogoContainer to='/'>
+              <Logo className='logo'/>
+            </LogoContainer>
         <div className="Button">
-            <Button crokpot to="/">Home</Button>
-        
+       
             <Button crokpot to="/accueil">Accueil</Button>
        
             <Button crokpot to="/menu">Menu</Button>
@@ -30,6 +35,7 @@ export default function BasicExample() {
      
             <Button crokpot to="/reservation"> Reservation </Button>
             </div>
+            </HeaderContainer>
     </div>
    
 
