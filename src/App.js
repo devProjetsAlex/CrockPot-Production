@@ -1,4 +1,6 @@
 import React from "react";
+import './App.css'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +17,9 @@ import Reservation from "./container/Reservation/Reservation";
 export default function BasicExample() {
   return (
     <Router>
+      <div>
       <div className="Header">
-       
+        <div className="Button">
             <Button crokpot to="/">Home</Button>
         
             <Button crokpot to="/accueil">Accueil</Button>
@@ -26,16 +29,11 @@ export default function BasicExample() {
             <Button crokpot to="/mixologie"> Mixologie </Button>
      
             <Button crokpot to="/reservation"> Reservation </Button>
+            </div>
+    </div>
+   
 
-        <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
+     
         <Switch>
           <Route exact path="/">
             <Homepage />
