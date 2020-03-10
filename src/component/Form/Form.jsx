@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import './Form.css'
 import Card from '../Card/Card'
 import Button from '../Button/Button'
+import {VALIDATOR_MIN} from '../../util/validator'
+
 
 const Form = props => {
 const [userName, setUserName] = useState('')
@@ -28,7 +30,7 @@ const [userName, setUserName] = useState('')
 
               <div className="form-control">
                 <label htmlFor="amount">Nombre de personne (Min. 6)</label>
-                <input type="number" id="amount" value={userAmount} onChange={event=>{setUserAmount(event.target.value)}}/>
+                <input type="number" id="amount" value={userAmount} validators={[VALIDATOR_MIN(5)]} errorText="Please enter a valid description (at least 5 characters)." onChange={event=>{setUserAmount(event.target.value)}}/>
               </div>
           
               <div className="form-control">
