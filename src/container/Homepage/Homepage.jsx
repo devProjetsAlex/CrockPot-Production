@@ -1,10 +1,13 @@
 import React from 'react'
-import './Homepage.css'
+import '../Accueil/Accueil.css'
 
 const Homepage = () => (
     <>
-    <div className='ImageLogo'>
-    
+    <div className='Center'>
+    <h1 className='Accueil'>Live Client </h1>
+    <div> Restaurant 1</div>
+    <div> Restaurant 2</div>
+    <div> Restaurant 3</div>
     </div>
     </>
 )

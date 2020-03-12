@@ -12,3 +12,12 @@
     z-index: 10;
    
 }  
+
+.Homepage {
+    width:100%;
+    height: 100%;
+    top: 650px;
+    left: 650px;
+    font-size: 50px;
+    margin-top: 8rem;
+}
