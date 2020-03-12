@@ -11,8 +11,9 @@ import Accueil from './container/Accueil/Accueil'
 import Menu from './container/Menu/Menu'
 import Mixologie from './container/Mixologie/Mixologie'
 import Homepage from './container/Homepage/Homepage'
-import Reservation from "./container/Reservation/Reservation";
+
 import Users from './component/User/Users'
+import UserReservation from './container/NewReservation/UserReservation'
 
 import MainNavigation from "./Navigation/MainNavigation/MainNavigation";
 
@@ -34,9 +35,11 @@ export default function App() {
           <Route path="/mixologie">
             <Mixologie />
           </Route>
-          <Route path="/reservation">
-            <Reservation />
+          
+          <Route path="/:userId/reservation" exact>
+                <UserReservation/>
           </Route>
+
           <Route path='/users'>
               <Users/>
           </Route>
