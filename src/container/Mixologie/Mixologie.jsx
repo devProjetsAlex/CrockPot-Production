@@ -1,8 +1,50 @@
-import React from 'react'
-import './Mixologie.css'
+import React, { Component } from "react";
+import Slider from "react-slick";
+import '../Menu/Menu.css'
+import Button from '../../component/Button/Button'
+import i1 from '../../asset/image/ImageMenu/1.png'
+import i2 from '../../asset/image/ImageMenu/2.jpg'
 
-const Mixologie = () => (
-    <div className='Mixologie'>Mixologie</div>
-)
-
-export default Mixologie
+export default class MIxologieSlider extends Component {
+    render() {
+      const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight:false,
+        variableWidth:false,
+        centerMode:false
+        
+      };
+      return (
+        <div>
+          <h2 className='Menu'>Mixologie</h2>
+          <Slider {...settings}>
+            <div>
+              <h3> <img src={i1}/></h3>
+            </div>
+            <div>
+              <h3><img src={i2}/></h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+          </Slider>
+          <div className='ButtonMenu'>
+          <Button crokpot> Ajouter </Button>
+          </div>
+        </div>
+      );
+    }
+  }

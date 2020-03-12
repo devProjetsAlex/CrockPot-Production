@@ -6,41 +6,22 @@ import {
   Switch,
   Route  
 } from "react-router-dom";
-import Button from './component/Button/Button'
 
 import Accueil from './container/Accueil/Accueil'
 import Menu from './container/Menu/Menu'
 import Mixologie from './container/Mixologie/Mixologie'
 import Homepage from './container/Homepage/Homepage'
 import Reservation from "./container/Reservation/Reservation";
+import Users from './component/User/Users'
 
-import {ReactComponent as Logo} from './asset/image/logo.svg' 
-import {LogoContainer, HeaderContainer} from './component/LogoContainer/LogoContainer'
-export default function BasicExample() {
+import MainNavigation from "./Navigation/MainNavigation/MainNavigation";
+
+export default function App() {
   return (
     <Router>
-      <div>
-       <div className='Header'>
-          <HeaderContainer >
-            <LogoContainer to='/'>
-              <Logo className='logo'/>
-            </LogoContainer>
-        <div className="Button">
-       
-            <Button crokpot to="/accueil">Accueil</Button>
-       
-            <Button crokpot to="/menu">Menu</Button>
-        
-            <Button crokpot to="/mixologie"> Mixologie </Button>
-     
-            <Button crokpot to="/reservation"> Reservation </Button>
-            </div>
-            </HeaderContainer>
-    </div>
-   
-
-     
-        <Switch>
+        <MainNavigation/>  
+           <main>
+         <Switch>
           <Route exact path="/">
             <Homepage />
           </Route>
@@ -56,13 +37,11 @@ export default function BasicExample() {
           <Route path="/reservation">
             <Reservation />
           </Route>
+          <Route path='/users'>
+              <Users/>
+          </Route>
         </Switch>
-      </div>
-    </Router>
+        </main>
+     </Router>
   );
 }
-
-// You can think of these components as "pages"
-// in your app.
-
-
