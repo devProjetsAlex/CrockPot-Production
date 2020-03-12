@@ -13,26 +13,26 @@ export default class MenuSlider extends Component {
       slidesToScroll: 1
     };
     return (
-      <div>
-        <h2 className='Menu'>Menu</h2>
+      <div className='Menu'>
+        <h2 >Menu</h2>
         <Slider {...settings}>
           <div>
-            <h3> Hello  World </h3>
+            <h3> Steak </h3>
           </div>
           <div>
-            <h3>2</h3>
+            <h3> Poisson </h3>
           </div>
           <div>
-            <h3>3</h3>
+            <h3> Végétarien </h3>
           </div>
           <div>
-            <h3>4</h3>
+            <h3> Poulet </h3>
           </div>
           <div>
-            <h3>5</h3>
+            <h3> Gateau au Chocolat</h3>
           </div>
           <div>
-            <h3>6</h3>
+            <h3> Gateau au Fraise </h3>
           </div>
         </Slider>
         <div className='ButtonMenu'>

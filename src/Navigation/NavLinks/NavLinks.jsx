@@ -19,13 +19,13 @@ const NavLinks = props => {
                 </NavLink>
             </li>
             <li>
-                <NavLink  to="/mixologie">
-                    Mixologie
+                <NavLink   to="/menu">
+                    Menu
                 </NavLink>
             </li>
             <li>
-                <NavLink   to="/menu">
-                    Menu
+                <NavLink  to="/mixologie">
+                    Mixologie
                 </NavLink>
             </li>
             <li>

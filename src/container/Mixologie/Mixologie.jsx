@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import '../Menu/Menu.css'
 import Button from '../../component/Button/Button'
-import i1 from '../../asset/image/ImageMenu/1.png'
-import i2 from '../../asset/image/ImageMenu/2.jpg'
 
 export default class MIxologieSlider extends Component {
     render() {
@@ -19,26 +17,26 @@ export default class MIxologieSlider extends Component {
         
       };
       return (
-        <div>
-          <h2 className='Menu'>Mixologie</h2>
+        <div className='Menu'>
+          <h2 >Mixologie</h2>
           <Slider {...settings}>
             <div>
-              <h3> <img src={i1}/></h3>
+              <h3> Corona </h3>
             </div>
             <div>
-              <h3><img src={i2}/></h3>
+              <h3>Gin Tonic </h3>
             </div>
             <div>
-              <h3>3</h3>
+              <h3> Vodka Mules</h3>
             </div>
             <div>
-              <h3>4</h3>
+              <h3> Straberry Shortcake</h3>
             </div>
             <div>
-              <h3>5</h3>
+              <h3> Courvoisier</h3>
             </div>
             <div>
-              <h3>6</h3>
+              <h3> Cognac </h3>
             </div>
           </Slider>
           <div className='ButtonMenu'>
