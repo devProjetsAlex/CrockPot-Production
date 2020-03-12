@@ -1,7 +1,7 @@
 import React from 'react'
 import UserList from './UserList/UserList'
 
-const Users = () => {
+const Users = (props) => {
 
     const USERS = [{
         id: 'u1',

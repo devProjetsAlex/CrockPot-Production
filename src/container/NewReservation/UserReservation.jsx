@@ -1,7 +1,9 @@
 import React from 'react'
 import ReservationList from '../../component/Reservation/ReservationList/ReservationList'
+import {useParams} from 'react-router-dom'
 
-const DUMMY_RESERVSATION = [
+
+const DUMMY_RESERVATION = [
     {
       id:'p1',
       title:'WizKhalifa HightTime Party',
@@ -21,6 +23,8 @@ const DUMMY_RESERVSATION = [
 ]
 
 const UserReservation= () => {
-    return <ReservationList item={DUMMY_RESERVSATION}/>
+    const userId= useParams().userId
+    const loadedReservation = DUMMY_RESERVATION.filter(reservation=> reservation.creator === userId)
+    return( <ReservationList items={loadedReservation}/>)
 }
-export const UserReservation
+export default UserReservation
